@@ -1,0 +1,97 @@
+/* ==========================================================================
+   DESIGN TOKENS & SYSTEM VARIABLES (Rajdevi MediClinic)
+   White outside canvas with rich sapphire blue & gold glassmorphic boxes
+   ========================================================================== */
+
+:root {
+  /* --- OUTSIDE BACKGROUND: CLEAN WHITE CANVAS --- */
+  --bg-canvas: #FFFFFF;           /* Base clean canvas */
+  --bg-canvas-subtle: #F8FAFC;    /* Soft clean light off-white */
+  --bg-primary: #FFFFFF;          /* Base canvas */
+  --bg-secondary: #F1F5F9;        /* Soft section tint */
+
+  /* --- BOXES & CARDS: PRESERVED SAPPHIRE BLUE GLASSMORPHISM --- */
+  --bg-surface: #0B1B33;          /* Dark blue card surface */
+  --bg-surface-soft: #0F2547;     /* Soft illuminated blue surface */
+  --bg-surface-elevated: #132C52; /* Elevated blue card surface */
+
+  /* --- TEXT CONTRAST --- */
+  --text-dark-primary: #0F172A;   /* Text on outside white background */
+  --text-dark-secondary: #475569; /* Subtitle on outside white background */
+  --text-primary: #FFFFFF;        /* Text inside dark blue boxes */
+  --text-secondary: #CBD5E1;      /* Crisp legible muted silver-slate inside boxes */
+  --text-tertiary: #94A3B8;       /* Caption slate inside boxes */
+  --text-inverse: #FFFFFF;        /* Crisp white */
+
+  /* --- 10% HEART & BRAND ACTION ACCENTS --- */
+  /* GOLD BRANDING ACCENT (Rajdevi MediClinic) */
+  --gold-primary: #F59E0B;
+  --gold-light: #FDE68A;
+  --gold-dark: #D97706;
+  --gold-gradient: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #D97706 100%);
+  --gold-glow: rgba(245, 158, 11, 0.4);
+
+  /* HEART ACTION ACCENTS */
+  --color-crimson: #E11D48;       /* Vital Heart Red / Emergency CTA */
+  --color-crimson-hover: #BE123C; /* Deeper crimson */
+  --color-crimson-glow: rgba(225, 29, 72, 0.45);
+  
+  --color-cyan: #0EA5E9;          /* ECG Wave Cyan */
+  --color-cyan-light: #38BDF8;    /* Bright pulse cyan */
+  --color-cyan-glow: rgba(14, 165, 233, 0.35);
+  
+  --color-navy: #1E3A8A;          /* Trust navy */
+  --color-navy-dark: #0B192C;     /* Cath-lab midnight */
+  
+  --color-emerald: #10B981;       /* Verified green */
+  --color-amber: #F59E0B;         /* Review stars gold */
+
+  /* --- ULTRA-PREMIER BLUE GLASSMORPHISM TOKENS --- */
+  --glass-bg-blue: rgba(11, 27, 51, 0.92);
+  --glass-bg-blue-subtle: rgba(15, 37, 71, 0.85);
+  --glass-border-blue: rgba(56, 189, 248, 0.28);
+  --glass-border-blue-hover: rgba(56, 189, 248, 0.55);
+  --glass-border-gold: rgba(245, 158, 11, 0.4);
+
+  --glass-blur: blur(16px);
+  --glass-blur-lg: blur(24px);
+
+  /* --- SHADOWS & ELEVATION ON WHITE CANVAS --- */
+  --shadow-sm: 0 4px 14px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 10px 30px -5px rgba(15, 23, 42, 0.14);
+  --shadow-lg: 0 20px 45px -10px rgba(15, 23, 42, 0.18);
+  --shadow-glass: 0 20px 45px -10px rgba(15, 23, 42, 0.25), inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+  --shadow-gold: 0 10px 25px -5px rgba(245, 158, 11, 0.35);
+  --shadow-crimson: 0 10px 25px -5px rgba(225, 29, 72, 0.45);
+  --shadow-cyan: 0 10px 25px -5px rgba(14, 165, 233, 0.35);
+
+  /* --- TYPOGRAPHY (Friendly & Empathetic) --- */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Fluid typography */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.8125rem);
+  --text-sm: clamp(0.875rem, 0.825rem + 0.25vw, 0.9375rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 1.875rem);
+  --text-3xl: clamp(1.875rem, 1.65rem + 1.1vw, 2.375rem);
+  --text-4xl: clamp(2.25rem, 1.95rem + 1.5vw, 3.125rem);
+  --text-hero: clamp(2.5rem, 2.1rem + 2vw, 3.75rem);
+
+  /* --- RADIUS & SPACING --- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 26px;
+  --radius-full: 9999px;
+
+  --container-max: 1240px;
+  --container-narrow: 920px;
+
+  /* --- TRANSITIONS --- */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
