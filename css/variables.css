@@ -4,21 +4,26 @@
    ========================================================================== */
 
 :root {
-  /* --- OUTSIDE BACKGROUND: CLEAN WHITE CANVAS --- */
-  --bg-canvas: #FFFFFF;           /* Base clean canvas */
-  --bg-canvas-subtle: #F8FAFC;    /* Soft clean light off-white */
-  --bg-primary: #FFFFFF;          /* Base canvas */
-  --bg-secondary: #F1F5F9;        /* Soft section tint */
+  /* --- OUTSIDE BACKGROUND: LUXURIOUS WARM CREAM CANVAS --- */
+  --bg-canvas: #FAF8F5;           /* Elegant warm medical cream */
+  --bg-canvas-subtle: #F3EFE6;    /* Soft warm porcelain cream */
+  --bg-primary: #FAF8F5;          /* Base cream canvas */
+  --bg-secondary: #F0EAE1;        /* Warm section tint */
 
-  /* --- BOXES & CARDS: PRESERVED SAPPHIRE BLUE GLASSMORPHISM --- */
+  /* --- OUTER LARGE BOXES: WARM CREAM / IVORY FROSTED GLASS --- */
+  --bg-box-outer: linear-gradient(145deg, rgba(255, 253, 248, 0.95), rgba(248, 243, 235, 0.92));
+  --border-box-outer: rgba(217, 119, 6, 0.22);
+  --shadow-box-outer: 0 20px 50px -10px rgba(15, 23, 42, 0.10);
+
+  /* --- INNER SMALL BOXES & CARDS: PRESERVED SAPPHIRE BLUE GLASSMORPHISM --- */
   --bg-surface: #0B1B33;          /* Dark blue card surface */
   --bg-surface-soft: #0F2547;     /* Soft illuminated blue surface */
   --bg-surface-elevated: #132C52; /* Elevated blue card surface */
 
-  /* --- TEXT CONTRAST --- */
-  --text-dark-primary: #0F172A;   /* Text on outside white background */
-  --text-dark-secondary: #475569; /* Subtitle on outside white background */
-  --text-primary: #FFFFFF;        /* Text inside dark blue boxes */
+  /* --- TEXT CONTRAST (High-Contrast Navy & Slate on Cream) --- */
+  --text-dark-primary: #0B1B33;   /* Outer headings on cream */
+  --text-dark-secondary: #334155; /* Outer subtitles on cream */
+  --text-primary: #FFFFFF;        /* Text inside dark blue small boxes */
   --text-secondary: #CBD5E1;      /* Crisp legible muted silver-slate inside boxes */
   --text-tertiary: #94A3B8;       /* Caption slate inside boxes */
   --text-inverse: #FFFFFF;        /* Crisp white */

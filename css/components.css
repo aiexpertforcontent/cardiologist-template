@@ -11,14 +11,15 @@
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: var(--text-sm);
-  padding: 0.75rem 1.4rem;
+  padding: 0.75rem 1.35rem;
   border-radius: var(--radius-full);
   transition: all var(--transition-normal);
-  line-height: 1;
+  line-height: 1.25;
   text-align: center;
-  white-space: nowrap;
   position: relative;
   overflow: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Vital Crimson CTA */
@@ -69,15 +70,15 @@
 
 /* Direct Google Maps Location Button */
 .btn-location {
-  background: rgba(14, 165, 233, 0.15);
+  background: rgba(14, 165, 233, 0.18);
   color: #7DD3FC;
-  border: 1px solid rgba(56, 189, 248, 0.35);
+  border: 1px solid rgba(56, 189, 248, 0.4);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
 .btn-location:hover {
-  background: rgba(14, 165, 233, 0.25);
+  background: rgba(14, 165, 233, 0.3);
   color: #FFFFFF;
   border-color: #38BDF8;
   transform: translateY(-2px);
@@ -115,7 +116,7 @@
 }
 
 .btn-lg {
-  padding: 0.95rem 1.85rem;
+  padding: 0.85rem 1.65rem;
   font-size: var(--text-base);
 }
 
@@ -211,6 +212,16 @@
   gap: 0.75rem;
 }
 
+@media (max-width: 640px) {
+  .announcement-inner {
+    justify-content: center;
+    text-align: center;
+  }
+  .announcement-right {
+    display: none;
+  }
+}
+
 .announcement-link {
   color: #7DD3FC;
   display: inline-flex;
@@ -230,19 +241,25 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(5, 11, 20, 0.96);
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  background: rgba(5, 11, 20, 0.97);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border-top: 1px solid rgba(56, 189, 248, 0.2);
-  padding: 0.65rem 0.85rem;
+  border-top: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 0.45rem 0.5rem calc(0.45rem + env(safe-area-inset-bottom));
   z-index: 990;
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
 }
 
 .mobile-action-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1.3fr;
-  gap: 0.4rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.35rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .mobile-action-btn {
@@ -250,43 +267,56 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.45rem 0.2rem;
+  padding: 0.4rem 0.15rem;
   border-radius: var(--radius-md);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 600;
   text-align: center;
   gap: 0.2rem;
   min-height: 48px; /* 48px touch target rule */
   line-height: 1.1;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.mobile-action-btn span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .mobile-action-btn svg {
   width: 17px;
   height: 17px;
+  flex-shrink: 0;
 }
 
 .mobile-btn-call {
   background: rgba(255, 255, 255, 0.08);
   color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .mobile-btn-maps {
-  background: rgba(14, 165, 233, 0.15);
+  background: rgba(14, 165, 233, 0.18);
   color: #7DD3FC;
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  border: 1px solid rgba(56, 189, 248, 0.35);
 }
 
 .mobile-btn-wa {
-  background: rgba(37, 211, 102, 0.18);
+  background: rgba(37, 211, 102, 0.22);
   color: #4ADE80;
-  border: 1px solid rgba(37, 211, 102, 0.35);
+  border: 1px solid rgba(37, 211, 102, 0.45);
 }
 
 .mobile-btn-book {
-  background: var(--color-crimson);
+  background: linear-gradient(135deg, var(--color-crimson), #BE123C);
   color: #FFFFFF;
-  box-shadow: var(--shadow-crimson);
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -294,7 +324,7 @@
     display: block;
   }
   body {
-    padding-bottom: 72px; /* Offset for sticky bar */
+    padding-bottom: 68px; /* Offset for sticky bar */
   }
 }
 
@@ -308,7 +338,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.25rem;
+  padding: 1rem;
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
@@ -326,7 +356,7 @@
   border-radius: var(--radius-xl);
   max-width: 520px;
   width: 100%;
-  padding: clamp(1.5rem, 1.25rem + 1vw, 2.25rem);
+  padding: clamp(1.25rem, 1rem + 1vw, 2.25rem);
   box-shadow: 0 25px 70px -15px rgba(0, 0, 0, 0.75);
   position: relative;
   transform: translateY(20px) scale(0.96);
@@ -334,6 +364,14 @@
   max-height: 90vh;
   overflow-y: auto;
   color: var(--text-primary);
+  box-sizing: border-box;
+}
+
+.modal-box .btn {
+  white-space: normal;
+  line-height: 1.3;
+  font-size: 0.92rem;
+  padding: 0.85rem 1rem;
 }
 
 .modal-overlay.active .modal-box {

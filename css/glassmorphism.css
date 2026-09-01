@@ -145,12 +145,12 @@
   color: #FDA4AF;
 }
 
-/* Frosted Navigation bar (Sapphire Blue Glass Box over White) */
+/* Frosted Navigation bar (Warm Cream Frosted Glass with Gold Accent) */
 .glass-header {
-  background: rgba(5, 11, 20, 0.95);
+  background: rgba(255, 253, 248, 0.96);
   backdrop-filter: var(--glass-blur-lg);
   -webkit-backdrop-filter: var(--glass-blur-lg);
-  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.15);
+  border-bottom: 1px solid rgba(217, 119, 6, 0.18);
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
   transition: all var(--transition-normal);
 }
